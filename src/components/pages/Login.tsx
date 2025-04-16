@@ -24,7 +24,11 @@ const Login: React.FC = () => {
             <form>
               <Input label="Your email" autoFocus required />
               <Input label="Your password" required />
-              <Input label="I agree to the Terms of Service." type="checkbox" />
+              <Input
+                label="I agree to the Terms of Service."
+                type="checkbox"
+                required
+              />
               <Button label="Sign In" />
             </form>
             <div className="or-divider">
