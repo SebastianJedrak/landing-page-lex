@@ -1,7 +1,11 @@
 import "./Card.scss";
 
-const Card: React.FC = () => {
-  return <div>Card</div>;
+interface CardProps {
+  children: string | React.ReactNode | React.ReactNode[];
 }
+
+const Card: React.FC<CardProps> = ({ children }) => {
+  return <div>{children}</div>;
+};
 
 export default Card;

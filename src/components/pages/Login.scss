@@ -1,1 +1,14 @@
 @use "../../variables.scss" as *;
+
+.login-page {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 79px;
+
+    .login-page__content {
+        width: 50%;
+    }
+  }
+}
