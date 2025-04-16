@@ -3,7 +3,7 @@
 .button-ui {
   color: $color-font-white;
   height: 50px;
-  border: 2px solid $color-font-grey;
+  border: none;
   border-radius: 100px;
   padding: 0 30px;
   cursor: pointer;
@@ -19,6 +19,8 @@
   }
   &.white {
     background-color: $color-background-light;
+    border: 2px solid $color-font-grey;
+    color: $color-font-heading;
   }
   &.twitter {
     background-color: $color-socials-twitter;
