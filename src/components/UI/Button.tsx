@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   fullWidth = false,
 }) => {
   return (
-    <button className={`button-ui ${variant} ${fullWidth && "full-width"}`} type={type}>
+    <button className={`button-ui button-middle ${variant} ${fullWidth && "full-width"}`} type={type}>
       {label}
     </button>
   );

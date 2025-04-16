@@ -5,9 +5,9 @@ import NavItem from "./NavItem";
 const Navbar: React.FC = () => {
   return (
     <nav className="navbar-ui">
-      <span>Startup 3</span>
+      <span className="company-name">Startup 3</span>
       <ul>
-        <NavItem label="Overview" />
+        <NavItem label="Overview" active/>
         <NavItem label="Prices" />
         <NavItem label="Blog" />
         <NavItem label="Feedback" />

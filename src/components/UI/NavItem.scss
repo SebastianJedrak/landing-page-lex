@@ -1,1 +1,9 @@
 @use "../../variables.scss" as *;
+
+.nav-item-ui {
+  cursor: pointer;
+
+  &.active {
+    opacity: 0.3;
+  }
+}
