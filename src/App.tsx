@@ -1,11 +1,12 @@
-import "./App.css";
 import { Routes, Route } from "react-router";
+import Login from "./components/pages/Login";
+import Pricing from "./components/pages/Pricing";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<div>Home</div>} />
-      <Route path="/pricing" element={<div>Pricing</div>} />
+      <Route path="/" element={<Login />} />
+      <Route path="/pricing" element={<Pricing />} />
     </Routes>
   );
 }
