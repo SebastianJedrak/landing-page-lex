@@ -3,11 +3,12 @@ import "./Navbar.scss";
 import NavItem from "./NavItem";
 
 const Navbar: React.FC = () => {
+  // There should be version for mobile use
   return (
     <nav className="navbar-ui">
       <span className="company-name">Startup 3</span>
       <ul>
-        <NavItem label="Overview" active/>
+        <NavItem label="Overview" active />
         <NavItem label="Prices" />
         <NavItem label="Blog" />
         <NavItem label="Feedback" />

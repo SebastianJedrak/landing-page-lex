@@ -18,5 +18,10 @@
     display: flex;
     align-items: center;
     gap: 33px;
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 }
