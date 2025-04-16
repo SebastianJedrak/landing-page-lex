@@ -1,7 +1,7 @@
 import "./Pricing.scss";
 
-function Pricing() {
+const Pricing: React.FC = () => {
   return <div>Pricing</div>;
-}
+};
 
 export default Pricing;

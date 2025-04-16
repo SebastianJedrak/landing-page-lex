@@ -1,7 +1,7 @@
 import "./PriceBox.scss";
 
-function PriceBox() {
+const PriceBox: React.FC = () => {
   return <div>PriceBox</div>;
-}
+};
 
 export default PriceBox;

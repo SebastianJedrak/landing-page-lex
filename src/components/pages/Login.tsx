@@ -1,7 +1,13 @@
+import Navbar from "../UI/Navbar";
 import "./Login.scss";
 
-function Login() {
-  return <div>Login</div>;
-}
+const Login: React.FC = () => {
+  return (
+    <>
+      <Navbar />
+      <div>Login</div>
+    </>
+  );
+};
 
 export default Login;

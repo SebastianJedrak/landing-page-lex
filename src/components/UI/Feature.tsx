@@ -1,6 +1,6 @@
 import "./Feature.scss";
 
-function Feature() {
+const Feature: React.FC = () => {
   return <div>Feature</div>;
 }
 

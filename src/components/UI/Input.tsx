@@ -1,7 +1,7 @@
 import "./Input.scss";
 
-function Input() {
+const Input: React.FC = () => {
   return <div>Input</div>;
-}
+};
 
 export default Input;

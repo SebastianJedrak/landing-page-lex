@@ -1,6 +1,6 @@
 import "./Button.scss";
 
-function Button() {
+const Button: React.FC = () => {
   return <div>Button</div>;
 }
 
