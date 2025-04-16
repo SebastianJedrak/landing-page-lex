@@ -19,22 +19,24 @@ const Login: React.FC = () => {
         </div>
 
         <div className="login-page__content login-page__card">
-          <h3>Sign Up Now</h3>
-          <form>
-            <Input label="Your email" />
-            <Input label="Your password" />
-            <Input label="I agree to the Terms of Service." type="checkbox" />
-            <Button label="Sign In" />
-          </form>
-          <div className="or-divider">
-            <hr />
-            <span>or</span>
-            <hr />
-          </div>
-          <Button label="Login via Twitter" />
-          <div className="sign-in">
-            <span className="sign-in__span">Do you have an Account?</span>
-            <span className="sign-in__link">Sign In</span>
+          <div className="login-page__card__container">
+            <h3>Sign Up Now</h3>
+            <form>
+              <Input label="Your email" />
+              <Input label="Your password" />
+              <Input label="I agree to the Terms of Service." type="checkbox" />
+              <Button label="Sign In" />
+            </form>
+            <div className="or-divider">
+              <hr />
+              <span>or</span>
+              <hr />
+            </div>
+            <Button label="Login via Twitter" />
+            <div className="sign-in">
+              <span className="sign-in__span">Do you have an Account?</span>
+              <span className="sign-in__link">Sign In</span>
+            </div>
           </div>
         </div>
       </main>

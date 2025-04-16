@@ -1,7 +1,6 @@
 @use "../../variables.scss" as *;
 
 .input-ui {
-  width: 330px;
   &.input-ui__input {
     height: 50px;
     border: 2px solid $color-font-grey;
