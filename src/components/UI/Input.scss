@@ -1,1 +1,20 @@
 @use "../../variables.scss" as *;
+
+.input-ui {
+  max-width: 330px;
+  &.input-ui__input {
+    height: 50px;
+    border: 2px solid $color-font-grey;
+    border-radius: 100px;
+    padding-left: 24px;
+
+    &::placeholder {
+      color: $color-font-transparent;
+    }
+  }
+
+  &.input-ui__checkbox {
+    display: flex;
+    gap: 13px;
+  }
+}

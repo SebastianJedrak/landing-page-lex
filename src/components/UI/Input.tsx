@@ -8,9 +8,11 @@ interface InputProps {
 const Input: React.FC<InputProps> = ({ label, type = "text" }) => {
   return (
     <>
-      {type !== "checkbox" && <input placeholder={label} type={type} />}
+      {type !== "checkbox" && (
+        <input className="input-ui input-ui__input" placeholder={label} type={type} />
+      )}
       {type === "checkbox" && (
-        <div>
+        <div className="input-ui input-ui__checkbox">
           <input type={type} />
           <label>{label}</label>
         </div>
