@@ -8,7 +8,7 @@ const Login: React.FC = () => {
     <div className="login-page">
       <Navbar />
       <main>
-        <div className="login-page__content">
+        <div className="login-page__content login-page__left">
           <h2>Generate Awesome Web Pages</h2>
           <h5>
             The most important part of the Startup is the samples. The samples

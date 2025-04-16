@@ -12,6 +12,15 @@
       min-width: min-content;
     }
 
+    .login-page__left {
+      h2 {
+        margin-bottom: 24px;
+      }
+      h5 {
+        margin-bottom: 45px;
+      }
+    }
+
     .login-page__card {
       color: $color-font-transparent;
       background-color: $color-background-light;
