@@ -1,1 +1,7 @@
 @use "../../variables.scss" as *;
+
+.price-box-ui {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -19,7 +19,7 @@ const PriceBox: React.FC<PriceBoxProps> = ({
   special = false,
 }) => {
   return (
-    <div className="price-box__container">
+    <div className="price-box-ui">
       <div className="price-box__card">
         <p>{planName}</p>
         <div className="price-box__card__price">
