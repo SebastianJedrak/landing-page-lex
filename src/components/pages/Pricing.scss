@@ -1,1 +1,8 @@
 @use "../../variables.scss" as *;
+
+.pricing-page {
+  color: $color-font-transparent;
+  background-color: $color-background-light;
+  padding: 2.5vw 10vw 0;
+  min-height: 100vh;
+}
