@@ -25,10 +25,10 @@ const activeIcon = (
 
 const PriceFeature: React.FC<PriceFeatureProps> = ({ name, active }) => {
   return (
-    <div className="price-feature-ui">
+    <li className="price-feature-ui">
       {active ? activeIcon : <div className="active-icon__empty"></div>}
       <span className={`paragraph ${!active && "no-active"}`}>{name}</span>
-    </div>
+    </li>
   );
 };
 

@@ -4,4 +4,62 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .price-box__card {
+    border-radius: 10px;
+    padding: 42px 64px;
+    margin-bottom: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.price-box__card-special {
+      background-color: $color-background-dark;
+      color: $color-font-white;
+      border: 2px solid $color-background-dark;
+    }
+
+    &.price-box__card-normal {
+      border: 2px solid $color-font-grey;
+
+      .price-box__card__price, .label {
+        color: $color-font-heading;
+      }
+    }
+
+    .label {
+      margin-bottom: 24px;
+    }
+
+    .price-box__card__price {
+      margin-bottom: 29px;
+      display: flex;
+
+      .price__value {
+        display: flex;
+
+        h2 {
+          display: inline;
+          line-height: 1;
+          margin-left: 5px;
+        }
+
+        .price__value__sub {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin-bottom: 7px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  .price-box__card__description {
+    text-align: center;
+  }
+
+  .price-box__features__items {
+    margin-bottom: 29px;
+  }
 }

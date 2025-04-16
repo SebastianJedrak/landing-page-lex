@@ -20,26 +20,39 @@ const PriceBox: React.FC<PriceBoxProps> = ({
 }) => {
   return (
     <div className="price-box-ui">
-      <div className="price-box__card">
-        <p>{planName}</p>
+      <div
+        className={`price-box__card ${
+          special ? "price-box__card-special" : "price-box__card-normal"
+        }`}
+      >
+        <p className="label">{planName}</p>
         <div className="price-box__card__price">
           <span>$</span>
-          <h2>{price}</h2>
-          <span>per user</span>
-          <span>per month</span>
-        </div>
-        <p>{description}</p>
-      </div>
-
-      <div className="price-box__features">
-        {features.map((feature) => (
-          <div key={feature.id} className="price-box__features__item">
-            <PriceFeature name={feature.name} active={feature.active} />
+          <div className="price__value">
+            <h2>{price}</h2>
+            <div className="price__value__sub">
+              <span>per user</span>
+              <span>per month</span>
+            </div>
           </div>
-        ))}
-
-        <Button label="Start Free Trial" />
+        </div>
+        <p className="paragraph price-box__card__description">{description}</p>
       </div>
+
+      <ul className="price-box__features__items">
+        {features.map((feature) => (
+          <PriceFeature
+            key={feature.id}
+            name={feature.name}
+            active={feature.active}
+          />
+        ))}
+      </ul>
+
+      <Button
+        label="Start Free Trial"
+        variant={special ? "primary" : "white"}
+      />
     </div>
   );
 };
