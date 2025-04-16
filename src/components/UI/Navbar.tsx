@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
         <NavItem label="Blog" />
         <NavItem label="Feedback" />
         <li>
-          <Button label="Purchase" />
+          <Button label="Purchase" variant="tertiary" />
         </li>
       </ul>
     </nav>

@@ -15,7 +15,7 @@ const Login: React.FC = () => {
             form a set of 25 usable pages you can use as is or you can add new
             blocks.
           </h5>
-          <Button label="Learn More" />
+          <Button label="Learn More" variant="tertiary" />
         </div>
 
         <div className="login-page__content login-page__card">
@@ -29,14 +29,14 @@ const Login: React.FC = () => {
                 type="checkbox"
                 required
               />
-              <Button label="Sign In" />
+              <Button label="Sign In" variant="primary" fullWidth />
             </form>
             <div className="or-divider">
               <hr />
               <span>or</span>
               <hr />
             </div>
-            <Button label="Login via Twitter" />
+            <Button label="Login via Twitter" variant="twitter" fullWidth />
             <div className="sign-in">
               <span className="sign-in__span">Do you have an Account?</span>
               <span className="sign-in__link">Sign In</span>

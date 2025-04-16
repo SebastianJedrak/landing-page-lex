@@ -1,1 +1,29 @@
 @use "../../variables.scss" as *;
+
+.button-ui {
+  color: $color-font-white;
+  height: 50px;
+  border: 2px solid $color-font-grey;
+  border-radius: 100px;
+  padding: 0 30px;
+  cursor: pointer;
+
+  &.primary {
+    background-color: $color-action-primary;
+  }
+  &.secondary {
+    background-color: $color-action-secondary;
+  }
+  &.tertiary {
+    background-color: $color-action-tertiary;
+  }
+  &.white {
+    background-color: $color-background-light;
+  }
+  &.twitter {
+    background-color: $color-socials-twitter;
+  }
+  &.full-width {
+    width: 100%;
+  }
+}
