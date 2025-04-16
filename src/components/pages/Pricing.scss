@@ -3,7 +3,7 @@
 .pricing-page {
   color: $color-font-transparent;
   background-color: $color-background-light;
-  padding: 2.5vw 10vw 0;
+  padding: 2.5vw 10vw;
   min-height: 100vh;
 
   h3 {
@@ -19,7 +19,7 @@
     margin: 0 auto 64px auto;
   }
 
-  .price-box__container {
+  .price-boxes__container {
     display: flex;
     gap: 30px;
     justify-content: center;
