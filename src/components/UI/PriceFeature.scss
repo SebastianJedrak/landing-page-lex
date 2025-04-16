@@ -1,0 +1,20 @@
+@use "../../variables.scss" as *;
+
+.price-feature-ui {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+
+  .active-icon__empty {
+    width: 14px;
+    height: 10px;
+  }
+
+  span {
+    margin-left: 18px;
+  }
+
+  .no-active {
+    color: $color-font-grey;
+  }
+}

@@ -1,6 +1,6 @@
 import { Features } from "../pages/Pricing";
 import Button from "./Button";
-import Feature from "./Feature";
+import PriceFeature from "./PriceFeature";
 import "./PriceBox.scss";
 
 interface PriceBoxProps {
@@ -34,7 +34,7 @@ const PriceBox: React.FC<PriceBoxProps> = ({
       <div className="price-box__features">
         {features.map((feature) => (
           <div key={feature.id} className="price-box__features__item">
-            <Feature />
+            <PriceFeature name={feature.name} active={feature.active} />
           </div>
         ))}
 
