@@ -1,0 +1,79 @@
+@use "./variables.scss" as *;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  color: $color-font-white;
+  background-color: $color-background-dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Heading / H2 Title */
+h2 {
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 70px;
+  letter-spacing: -1px;
+}
+
+/* Heading / H3 Title */
+h3 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -0.4px;
+}
+
+/* Heading / H5 Lead */
+h5 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+/* Text / Paragraph */
+p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Text / Article */
+.article {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+/* Text / Label */
+.label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Buttons / Middle */
+.button-middle {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+}
