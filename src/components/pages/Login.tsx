@@ -26,15 +26,16 @@ const Login: React.FC = () => {
             <Input label="I agree to the Terms of Service." type="checkbox" />
             <Button label="Sign In" />
           </form>
-          <div>
+          <div className="or-divider">
             <hr />
             <span>or</span>
             <hr />
           </div>
           <Button label="Login via Twitter" />
-          <span>
-            Do you have an Account?<span> Sign In</span>
-          </span>
+          <div className="sign-in">
+            <span className="sign-in__span">Do you have an Account?</span>
+            <span className="sign-in__link">Sign In</span>
+          </div>
         </div>
       </main>
     </div>

@@ -12,24 +12,54 @@
     }
 
     .login-page__card {
-      h3 {
-        color: $color-font-heading;
-        margin-bottom: 34px;
-        text-align: center;
-      }
-
       color: $color-font-transparent;
       background-color: $color-background-light;
       padding: 3vw 2.5vw;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
+
+      h3 {
+        color: $color-font-heading;
+        margin-bottom: 34px;
+        text-align: center;
+      }
     }
 
     form {
       display: flex;
       flex-direction: column;
       gap: 20px;
+    }
+
+    .or-divider {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 15px 0;
+
+      span {
+        margin: 0 10px;
+      }
+
+      hr {
+        width: 50%;
+        height: 1px;
+        border-color: $color-font-transparent;
+      }
+    }
+
+    .sign-in {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+
+      .sign-in__link {
+        color: $color-action-primary;
+        cursor: pointer;
+      }
     }
   }
 }
