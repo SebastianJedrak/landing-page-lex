@@ -10,5 +10,11 @@
     .login-page__content {
         width: 50%;
     }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
   }
 }
