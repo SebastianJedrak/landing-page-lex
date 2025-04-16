@@ -1,3 +1,4 @@
+import Button from "./Button";
 import "./Navbar.scss";
 import NavItem from "./NavItem";
 
@@ -11,7 +12,7 @@ const Navbar: React.FC = () => {
         <NavItem label="Blog" />
         <NavItem label="Feedback" />
         <li>
-          <button>Purchase</button>
+          <Button label="Purchase" />
         </li>
       </ul>
     </nav>
