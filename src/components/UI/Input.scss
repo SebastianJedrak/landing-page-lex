@@ -14,6 +14,22 @@
 
   &.input-ui__checkbox {
     display: flex;
-    gap: 13px;
+    align-items: center;
+
+    label,
+    input {
+      cursor: pointer;
+    }
+
+    label {
+      padding-left: 13px;
+    }
+
+    input {
+      height: 24px;
+      width: 24px;
+      accent-color: $color-action-primary;
+      border-radius: 6px;
+    }
   }
 }

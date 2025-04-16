@@ -29,7 +29,7 @@ const Login: React.FC = () => {
                 type="checkbox"
                 required
               />
-              <Button label="Sign In" variant="primary" fullWidth />
+              <Button label="Sign In" variant="secondary" fullWidth />
             </form>
             <div className="or-divider">
               <hr />
