@@ -8,13 +8,28 @@
     gap: 79px;
 
     .login-page__content {
-        width: 50%;
+      width: 50%;
+    }
+
+    .login-page__card {
+      h3 {
+        color: $color-font-heading;
+        margin-bottom: 34px;
+        text-align: center;
+      }
+
+      color: $color-font-transparent;
+      background-color: $color-background-light;
+      padding: 3vw 2.5vw;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
     }
 
     form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
   }
 }

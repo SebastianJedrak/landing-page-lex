@@ -18,7 +18,7 @@ const Login: React.FC = () => {
           <Button label="Learn More" />
         </div>
 
-        <div className="login-page__content">
+        <div className="login-page__content login-page__card">
           <h3>Sign Up Now</h3>
           <form>
             <Input label="Your email" />
