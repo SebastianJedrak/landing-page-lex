@@ -22,8 +22,8 @@ const Login: React.FC = () => {
           <div className="login-page__card__container">
             <h3>Sign Up Now</h3>
             <form>
-              <Input label="Your email" />
-              <Input label="Your password" />
+              <Input label="Your email" autoFocus required />
+              <Input label="Your password" required />
               <Input label="I agree to the Terms of Service." type="checkbox" />
               <Button label="Sign In" />
             </form>
