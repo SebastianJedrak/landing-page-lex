@@ -1,5 +1,4 @@
 import Button from "../UI/Button";
-import Card from "../UI/Card";
 import Input from "../UI/Input";
 import Navbar from "../UI/Navbar";
 import "./Login.scss";
@@ -20,24 +19,22 @@ const Login: React.FC = () => {
         </div>
 
         <div className="login-page__content">
-          <Card>
-            <h3>Sign Up Now</h3>
-            <form>
-              <Input label="Your email" />
-              <Input label="Your password" />
-              <Input label="I agree to the Terms of Service." type="checkbox" />
-              <Button label="Sign In" />
-            </form>
-            <div>
-              <hr />
-              <span>or</span>
-              <hr />
-            </div>
-            <Button label="Login via Twitter" />
-            <span>
-              Do you have an Account?<span> Sign In</span>
-            </span>
-          </Card>
+          <h3>Sign Up Now</h3>
+          <form>
+            <Input label="Your email" />
+            <Input label="Your password" />
+            <Input label="I agree to the Terms of Service." type="checkbox" />
+            <Button label="Sign In" />
+          </form>
+          <div>
+            <hr />
+            <span>or</span>
+            <hr />
+          </div>
+          <Button label="Login via Twitter" />
+          <span>
+            Do you have an Account?<span> Sign In</span>
+          </span>
         </div>
       </main>
     </div>
