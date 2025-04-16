@@ -33,11 +33,11 @@ const Login: React.FC = () => {
             </form>
             <div className="or-divider">
               <hr />
-              <span>or</span>
+              <span className="paragraph">or</span>
               <hr />
             </div>
             <Button label="Login via Twitter" variant="twitter" fullWidth />
-            <div className="sign-in">
+            <div className="sign-in article">
               <span className="sign-in__span">Do you have an Account?</span>
               <span className="sign-in__link">Sign In</span>
             </div>

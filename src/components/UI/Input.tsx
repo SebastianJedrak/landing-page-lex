@@ -17,7 +17,7 @@ const Input: React.FC<InputProps> = ({
     <>
       {type !== "checkbox" && (
         <input
-          className="input-ui input-ui__input"
+          className="input-ui input-ui__input button-middle"
           placeholder={label}
           type={type}
           autoFocus={autoFocus}
@@ -27,7 +27,7 @@ const Input: React.FC<InputProps> = ({
       {type === "checkbox" && (
         <div className="input-ui input-ui__checkbox">
           <input type={type} autoFocus={autoFocus} required={required} />
-          <label>{label}</label>
+          <label className="paragraph">{label}</label>
         </div>
       )}
     </>
