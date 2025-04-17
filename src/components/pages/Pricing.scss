@@ -23,5 +23,9 @@
     display: flex;
     gap: 30px;
     justify-content: center;
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+    }
   }
 }
