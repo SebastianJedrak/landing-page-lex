@@ -8,6 +8,11 @@
   padding: 0 30px;
   cursor: pointer;
 
+  &:disabled {
+    filter: saturate(0);
+    cursor: not-allowed;
+  }
+
   &.primary {
     background-color: $color-action-primary;
   }

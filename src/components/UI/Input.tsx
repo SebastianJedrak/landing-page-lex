@@ -25,7 +25,7 @@ const Input: React.FC<InputProps> = ({
       onChange(event.target.value, type);
     }
   };
-  
+
   return (
     <>
       {type !== "checkbox" && (
@@ -38,6 +38,7 @@ const Input: React.FC<InputProps> = ({
           autoFocus={autoFocus}
           required={required}
           onChange={handleChange}
+          autoComplete="off"
         />
       )}
       {type === "checkbox" && (
@@ -49,6 +50,7 @@ const Input: React.FC<InputProps> = ({
             autoFocus={autoFocus}
             required={required}
             onChange={handleChange}
+            autoComplete="off"
           />
           <label className="paragraph" htmlFor={label}>
             {label}

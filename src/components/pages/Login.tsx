@@ -88,6 +88,7 @@ const Login: React.FC = () => {
                 type="submit"
                 variant="secondary"
                 fullWidth
+                disabled={isLoading}
               />
             </form>
             <div className="or-divider">
