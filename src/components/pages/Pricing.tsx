@@ -4,6 +4,7 @@ import PriceBox from "../UI/PriceBox";
 import "./Pricing.scss";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import Button from "../UI/Button";
 
 export type Feature = {
   id: number;
@@ -21,7 +22,7 @@ const featuresNames = [
 ];
 
 const Pricing: React.FC = () => {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, logout } = useAuth();
   const navigate = useNavigate();
 
   useEffect((): void => {
@@ -30,8 +31,13 @@ const Pricing: React.FC = () => {
     }
   }, [isLoggedIn]);
 
+  const handleLogout = () => {
+    logout();
+  };
+
   return (
     <div className="pricing-page">
+      <Button label="Logout" variant="tertiary" onClick={handleLogout} />
       <h3>Simple & flexible pricing built for everyone</h3>
       <p className="paragraph pricing-page__description">
         Start with 14-day free trial. No credit card needed. Cancel at anytime.

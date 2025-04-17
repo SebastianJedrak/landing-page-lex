@@ -11,6 +11,7 @@ interface AuthContextType {
   isLoading: boolean;
   error: string | null;
   login: (email: string, password: string) => Promise<boolean>;
+  logout: () => void;
 }
 
 interface AuthProviderProps {
@@ -72,11 +73,17 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
+  const logout = (): void => {
+    setIsLoggedIn(false);
+    sessionStorage.removeItem("isLoggedIn");
+  };
+
   const value: AuthContextType = {
     isLoggedIn,
     isLoading,
     error,
     login,
+    logout
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
