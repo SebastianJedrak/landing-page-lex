@@ -5,7 +5,7 @@ import Navbar from "../UI/Navbar";
 import "./Login.scss";
 import { useAuth } from "../store/AuthContext";
 import Toast from "../UI/Toast";
-import { replace, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 const Login: React.FC = () => {
   const [inputEmail, setInputEmail] = useState<string>("");

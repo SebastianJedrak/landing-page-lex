@@ -16,9 +16,9 @@ const activeIcon = (
     <path
       d="M1 5.1001L4.97059 8.6001L13 1.6001"
       stroke="#25DAC5"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
