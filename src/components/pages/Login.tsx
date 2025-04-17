@@ -6,6 +6,7 @@ import "./Login.scss";
 import { useAuth } from "../store/AuthContext";
 import Toast from "../UI/Toast";
 import { useNavigate } from "react-router";
+import { motion } from "framer-motion";
 
 const Login: React.FC = () => {
   const [inputEmail, setInputEmail] = useState<string>("");
@@ -47,7 +48,13 @@ const Login: React.FC = () => {
     <div className="login-page">
       <Navbar />
       <main>
-        <div className="login-page__content login-page__left">
+        <motion.div
+          className="login-page__content login-page__left"
+          initial={{ x: -200, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          exit={{ x: -200, opacity: 0 }}
+          transition={{ duration: 1 }}
+        >
           <h2>Generate Awesome Web Pages</h2>
           <h5>
             The most important part of the Startup is the samples. The samples
@@ -55,9 +62,15 @@ const Login: React.FC = () => {
             blocks.
           </h5>
           <Button label="Learn More" variant="tertiary" />
-        </div>
+        </motion.div>
 
-        <div className="login-page__content login-page__card">
+        <motion.div
+          className="login-page__content login-page__card"
+          initial={{ y: -20 }}
+          animate={{ y: 0 }}
+          exit={{ y: -20 }}
+          transition={{ duration: 1 }}
+        >
           <div className="login-page__card__container">
             <h3>Sign Up Now</h3>
             <form onSubmit={handleSubmit}>
@@ -102,7 +115,7 @@ const Login: React.FC = () => {
               <span className="sign-in__link">Sign In</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </main>
       <aside>
         {isLoading && <Toast label="Loading..." type="info" />}
