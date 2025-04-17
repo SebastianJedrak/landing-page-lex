@@ -50,6 +50,14 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
+      // Validation
+      if (email.split("@").length !== 2) {
+        throw new Error("Invalid email format");
+      }
+      if (password.length < 6) {
+        throw new Error("Password must be at least 6 characters long.");
+      }
+
       setIsLoggedIn(true);
 
       return true;
