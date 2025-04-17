@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../UI/Button";
 import Input from "../UI/Input";
 import Navbar from "../UI/Navbar";
 import "./Login.scss";
 import { useAuth } from "../store/AuthContext";
 import Toast from "../UI/Toast";
+import { replace, useNavigate } from "react-router";
 
 const Login: React.FC = () => {
   const [inputEmail, setInputEmail] = useState<string>("");
@@ -12,6 +13,14 @@ const Login: React.FC = () => {
   const [inputCheckbox, setInputCheckbox] = useState<boolean>(false);
 
   const { isLoggedIn, isLoading, error, login } = useAuth();
+
+  const navigate = useNavigate();
+
+  useEffect((): void => {
+    if (isLoggedIn) {
+      navigate("/pricing", { replace: true });
+    }
+  }, [isLoggedIn]);
 
   const handleInputChange = (value: string | boolean, type: string) => {
     switch (type) {
@@ -95,8 +104,8 @@ const Login: React.FC = () => {
         </div>
       </main>
       <aside>
-        {isLoading && <Toast label="Loading..." type="info"/>}
-        {error && <Toast label={error} type="warning"/>}
+        {isLoading && <Toast label="Loading..." type="info" />}
+        {error && <Toast label={error} type="warning" />}
       </aside>
     </div>
   );

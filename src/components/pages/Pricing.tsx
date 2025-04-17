@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router";
+import { useAuth } from "../store/AuthContext";
 import PriceBox from "../UI/PriceBox";
 import "./Pricing.scss";
+import { useEffect } from "react";
 
 export type Feature = {
   id: number;
@@ -17,6 +20,15 @@ const featuresNames = [
 ];
 
 const Pricing: React.FC = () => {
+  const { isLoggedIn } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect((): void => {
+    if (!isLoggedIn) {
+      navigate("/", { replace: true });
+    }
+  }, [isLoggedIn]);
+
   return (
     <div className="pricing-page">
       <h3>Simple & flexible pricing built for everyone</h3>
