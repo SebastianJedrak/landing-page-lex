@@ -4,6 +4,7 @@ import Input from "../UI/Input";
 import Navbar from "../UI/Navbar";
 import "./Login.scss";
 import { useAuth } from "../store/AuthContext";
+import Toast from "../UI/Toast";
 
 const Login: React.FC = () => {
   const [inputEmail, setInputEmail] = useState<string>("");
@@ -93,6 +94,10 @@ const Login: React.FC = () => {
           </div>
         </div>
       </main>
+      <aside>
+        {isLoading && <Toast label="Loading..." type="info"/>}
+        {error && <Toast label={error} type="warning"/>}
+      </aside>
     </div>
   );
 };

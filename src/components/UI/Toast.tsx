@@ -7,8 +7,8 @@ interface ToastProps {
 
 const Toast: React.FC<ToastProps> = ({ label, type = "info" }) => {
   return (
-    <div>
-      {label} {type}
+    <div className={`toast-ui toast__${type}`}>
+      {label} 
     </div>
   );
 };

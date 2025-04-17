@@ -1,0 +1,18 @@
+@use "../../variables.scss" as *;
+
+.toast-ui {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 20px;
+  border-radius: 5px;
+  &.toast__info {
+    background-color: $color-action-primary;
+    color: $color-font-white;
+  }
+  &.toast__warning {
+    background-color: $color-action-tertiary;
+    color: $color-font-white;
+  }
+}
