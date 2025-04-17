@@ -3,6 +3,7 @@ import { useAuth } from "../store/AuthContext";
 import PriceBox from "../UI/PriceBox";
 import "./Pricing.scss";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export type Feature = {
   id: number;
@@ -35,7 +36,13 @@ const Pricing: React.FC = () => {
       <p className="paragraph pricing-page__description">
         Start with 14-day free trial. No credit card needed. Cancel at anytime.
       </p>
-      <div className="price-boxes__container">
+      <motion.div
+        className="price-boxes__container"
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 50, opacity: 0 }}
+        transition={{ duration: 1 }}
+      >
         <PriceBox
           planName="START"
           price="19"
@@ -70,7 +77,7 @@ const Pricing: React.FC = () => {
             { id: 4, name: featuresNames[3], active: true },
           ]}
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
