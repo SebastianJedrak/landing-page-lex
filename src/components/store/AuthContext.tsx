@@ -11,7 +11,6 @@ interface AuthContextType {
   isLoading: boolean;
   error: string | null;
   login: (email: string, password: string) => Promise<boolean>;
-  logout: () => void;
 }
 
 interface AuthProviderProps {
@@ -32,7 +31,7 @@ export const useAuth = (): AuthContextType => {
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
-    const storedState = localStorage.getItem("isLoggedIn");
+    const storedState = sessionStorage.getItem("isLoggedIn");
     return storedState ? JSON.parse(storedState) : false;
   });
 
@@ -40,7 +39,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    localStorage.setItem("isLoggedIn", JSON.stringify(isLoggedIn));
+    sessionStorage.setItem("isLoggedIn", JSON.stringify(isLoggedIn));
   }, [isLoggedIn]);
 
   const login = async (email: string, password: string): Promise<boolean> => {
@@ -61,9 +60,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       setIsLoggedIn(true);
 
       return true;
-    } catch (error) {
-      if (error instanceof Error) {
-        setError(error.message);
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
       } else {
         setError("An unknown error occurred");
       }
@@ -73,16 +72,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  const logout = (): void => {
-    setIsLoggedIn(false);
-  };
-
   const value: AuthContextType = {
     isLoggedIn,
     isLoading,
     error,
     login,
-    logout,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -10,7 +10,7 @@ const Login: React.FC = () => {
   const [inputPassword, setInputPassword] = useState<string>("");
   const [inputCheckbox, setInputCheckbox] = useState<boolean>(false);
 
-  const { isLoggedIn, login } = useAuth();
+  const { isLoggedIn, isLoading, error, login } = useAuth();
 
   const handleInputChange = (value: string | boolean, type: string) => {
     switch (type) {
@@ -28,16 +28,9 @@ const Login: React.FC = () => {
     }
   };
 
-  const handleSubmit =  (event: React.FormEvent) => {
+  const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    login(inputEmail, inputPassword).then((result) => {
-      if (result) {
-        console.log("Login successful!");
-      } else {
-        console.log("Login failed.");
-      }
-    });
-    
+    login(inputEmail, inputPassword);
   };
 
   return (
@@ -80,7 +73,12 @@ const Login: React.FC = () => {
                 onChange={handleInputChange}
                 required
               />
-              <Button label="Sign In" type="submit" variant="secondary" fullWidth />
+              <Button
+                label="Sign In"
+                type="submit"
+                variant="secondary"
+                fullWidth
+              />
             </form>
             <div className="or-divider">
               <hr />
