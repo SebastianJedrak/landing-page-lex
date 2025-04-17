@@ -1,9 +1,30 @@
+import { useState } from "react";
 import Button from "../UI/Button";
 import Input from "../UI/Input";
 import Navbar from "../UI/Navbar";
 import "./Login.scss";
 
 const Login: React.FC = () => {
+  const [inputEmail, setInputEmail] = useState<string>("");
+  const [inputPassword, setInputPassword] = useState<string>("");
+  const [inputCheckbox, setInputCheckbox] = useState<boolean>(false);
+
+  const handleInputChange = (value: string | boolean, type: string) => {
+    switch (type) {
+      case "email":
+        setInputEmail(value as string);
+        break;
+      case "password":
+        setInputPassword(value as string);
+        break;
+      case "checkbox":
+        setInputCheckbox(value as boolean);
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <div className="login-page">
       <Navbar />
@@ -22,11 +43,26 @@ const Login: React.FC = () => {
           <div className="login-page__card__container">
             <h3>Sign Up Now</h3>
             <form>
-              <Input label="Your email" autoFocus required />
-              <Input label="Your password" required />
               <Input
+                value={inputEmail}
+                label="Your email"
+                type="email"
+                autoFocus
+                required
+                onChange={handleInputChange}
+              />
+              <Input
+                value={inputPassword}
+                label="Your password"
+                type="password"
+                onChange={handleInputChange}
+                required
+              />
+              <Input
+                value={inputCheckbox}
                 label="I agree to the Terms of Service."
                 type="checkbox"
+                onChange={handleInputChange}
                 required
               />
               <Button label="Sign In" variant="secondary" fullWidth />
